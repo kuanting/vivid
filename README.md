@@ -6,7 +6,11 @@ In addition, we create NPC with simulated human actions to simulate real world e
 
 ![VIVID Main Menu](/images/vivid_menu.png)
 
-#![Human Action Examples](/images/action_examples.png)
+## Human Actions
+[Human Action Examples](/images/action_examples.png)
+
+## Architecture
+![](/images/vivd_arch.png)
 
 ## Download Source code
 The source code and UE4 project file can be downloaded below. Note that you need to install UE4 editor first. We only support Windows now but Linux version is coming soon. 
@@ -17,20 +21,6 @@ The source code and UE4 project file can be downloaded below. Note that you need
 The pre-compiled binary files can be downloaded here:  
 [Windows](https://drive.google.com/drive/folders/0Bx89nDDBxkF-ZHNtMVZsZzRZbGM?usp=sharing)
 
-## User Controls
-| Control | Key |
-|---------|-----|
-|Help Menu | F1 |
-|W S A D </br> ↑ ↓ ← → | Fly in X-Y plane |  
-|Space / Ctrl </br> PageUp / PageDown	|Fly Up / Down  |
-|Q / E				|(Left / Right ) yaw rotation |  
-|Alt + P			| Take screenshot |
-|C					|Toggle Camera View |
-|U					|Toggle User flight recording |
-|0					|Toggle Sub-windows |
-|1					|Toggle Depth sub-window |
-|2					|Toggle Segmentation sub-window |
-|3					|Toggle scene sub-window | 
 
 ## Python Controls
 [See example in /python_client](/python_client)
