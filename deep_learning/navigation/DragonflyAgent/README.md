@@ -74,6 +74,6 @@ You can also use your own checkpoints.
 
 ## References
 
-* Dragonfly simulator: https://github.com/kuanting/dragonfly
+* VIVID simulator: https://github.com/kuanting/vivid
 * PSPNet pytorch implementation: https://github.com/kazuto1011/pspnet-pytorch
 * A3C pytorch implementation: https://github.com/ikostrikov/pytorch-a3c
