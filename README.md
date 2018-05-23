@@ -13,7 +13,7 @@ In addition, we create NPC with simulated human actions to simulate real world e
 ![](/images/vivid_arch.png)
 
 ## Download Source code
-The source code and UE4 project file can be downloaded from source folder (/source). Note that you need to install UE4 editor first. We only support Windows now but Linux version is coming soon. 
+The source code and UE4 project file can be downloaded from source folder [/source](/source). Note that you need to install UE4 editor first. We only support Windows now but Linux version is coming soon. 
 
 
 ## Download Binaries
