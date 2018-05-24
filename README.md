@@ -7,6 +7,7 @@ In addition, we create NPC with simulated human actions to simulate real world e
 ![VIVID Main Menu](/images/vivid_menu.png)
 
 ## Human Actions
+<video src="videos/zoe_samba_dance.mp4" controls preload></video>
 ![Human Action Examples](/images/action_examples.png)
 
 ## Architecture
