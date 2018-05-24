@@ -4,10 +4,17 @@ VIVID (VIrtual environment for VIsual Deep learning) is a photo-realistic simula
 VIVID supports four different characters: robot (mannequin), simple drone, AirSim drone and automobile. Twelve large, diversified indoor and outdoor scenes are included. 
 In addition, we create NPC with simulated human actions to simulate real world events, such as gun shooting and forest fire rescue. VIVID is based on [Unreal Engine](https://www.unrealengine.com) and [Microsoft AirSim](https://github.com/Microsoft/AirSim). 
 
+
+
+
+
+![Samba dance](/images/zoe_sambe_dance.gif)|![Fly in a ruined school](/images/drone_fly_in_ruin.gif)
+:-----------------------------------------:|:-------------------------------------------------------:
+![Forest fire](/images/robot_run_in_forest_fire.gif)|![Gun shooting detection](/images/drone_in_gun_shooting.gif)
+
 ![VIVID Main Menu](/images/vivid_menu.png)
 
 ## Human Actions
-<video src="videos/zoe_samba_dance.mp4" controls preload></video>
 ![Human Action Examples](/images/action_examples.png)
 
 ## Architecture
