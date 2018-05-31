@@ -34,7 +34,7 @@ The source code and UE4 project file can be downloaded from source folder [/sour
 ## Download Binaries
 The pre-compiled binary files can be downloaded here:
 
-- [Windows](https://drive.google.com/drive/folders/0Bx89nDDBxkF-ZHNtMVZsZzRZbGM?usp=sharing)
+- [Windows](https://drive.google.com/open?id=18EMYzQpfd-VRArLR0OVhL_2SSWgLGNrS)
 
 
 ## Python Controls
