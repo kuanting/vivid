@@ -12,9 +12,12 @@ class VividClient(AirSimClientBase, object):
     
     def isHit(self):
         return self.client.call('isHit')
-    
-    def getPosition(self):
-        return self.client.call('getPosition')
+
+    def getLocation(self):
+        return self.client.call('getLocation')
+
+    def getRotation(self):
+        return self.client.call('getRotation')
 
     def reset(self):
         return self.client.call('reset')
