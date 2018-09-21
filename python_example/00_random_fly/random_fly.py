@@ -1,6 +1,10 @@
-from VividClient import *
+import sys
 import random
 import time
+
+sys.path.append('../')
+from VividClient import *
+sys.path.append('00_random_fly/')
 
 speed = 50
 turnSpeed = 5 
