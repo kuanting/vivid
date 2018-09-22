@@ -10,7 +10,7 @@ sys.path.append('../')
 from VividClient import *
 sys.path.append('02_object_generation/')
 
-parser = argparse.ArgumentParser(description='generate_object_map')
+parser = argparse.ArgumentParser(description='generate with object map')
 parser.add_argument('--ip', default='127.0.0.1',
                     help='ip (default: 127.0.0.1)')
 parser.add_argument('--port', type=int, default=16612,
