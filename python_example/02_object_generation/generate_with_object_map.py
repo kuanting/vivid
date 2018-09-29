@@ -17,8 +17,8 @@ parser.add_argument('--port', type=int, default=16612,
                     help='port (default: 16612)')
 parser.add_argument('--infile', default='input.txt',
                     help='input file name (default: input.txt)')
-parser.add_argument('--item-id', type=int, default=0,
-                    help='itemid (default: 0)')
+parser.add_argument('--item-type', type=int, default=-1,
+                    help='item type (default: -1: fire)')
 
 if __name__ == '__main__':
 
@@ -36,6 +36,6 @@ if __name__ == '__main__':
     coor_list = np.array(coor_list, dtype=float)
     
     for c in coor_list:
-        time.sleep(1)
-        client.createMapObject(args.item_id, c[0], c[1], c[2])
+        time.sleep(0.1)
+        client.createMapObject(args.item_type, c[0], c[1], c[2])
     

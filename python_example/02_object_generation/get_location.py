@@ -28,7 +28,7 @@ if __name__ == '__main__':
         if command == 'g':
             with open(args.outfile, 'a') as texts:
                 location = client.getLocation()
-                print(location[0], file=texts)
+                print(location, file=texts)
         
         elif command == 'exit':
             print('Exit getPos')
