@@ -38,4 +38,4 @@ The pre-compiled binary files can be downloaded here:
 
 
 ## Python Controls
-See examples in [/python_client](/python_client)
+See examples in [/python_example](/python_example)
