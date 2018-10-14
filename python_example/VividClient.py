@@ -15,6 +15,9 @@ class VividClient(AirSimClientBase, object):
 
     def getLocation(self):
         return self.client.call('getLocation')
+    
+    def setLocation(self, x, y, z):
+        return self.client.call('setLocation', x, y, z)
 
     def getRotation(self):
         return self.client.call('getRotation')
@@ -24,6 +27,12 @@ class VividClient(AirSimClientBase, object):
 
     def createMapObject(self, type_id, x, y, z):
         return self.client.call('createMapObject', type_id, x, y, z)
+    
+    def loadMap(self, map_id):
+        return self.client.call('loadMap', map_id)
+    
+    def getMapNames(self):
+        return self.client.call('getMapNames')
 
 
 class VividMapObjectType:
