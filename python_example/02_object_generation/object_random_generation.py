@@ -13,14 +13,14 @@ parser.add_argument('--ip', default='127.0.0.1',
                     help='ip (default: 127.0.0.1)')
 parser.add_argument('--port', type=int, default=16612,
                     help='port (default: 16612)')
-parser.add_argument('--infile', default='input.txt',
-                    help='input file name (default: input.txt)')
-parser.add_argument('--item-type', type=int, default=-1,
-                    help='item type (default: -1: fire)')
+parser.add_argument('--infile', default='object_map/small_office.txt',
+                    help='input file name (default: object_map/small_office.txt)')
+parser.add_argument('--item-type', type=int, default=0,
+                    help='item type (default: 0: chair)')
 parser.add_argument('--episode', type=int, default=5,
                     help='number of episodes')
 parser.add_argument('--env', type=int, default=0,
-                    help='the id of environment')
+                    help='the id of environment (default: 0: Small Office)')
 
 
 def get_map_coor(filename):
@@ -53,7 +53,7 @@ def check_if_spot(cli_coor, cli_ang,obj_coor):
     dz = obj_coor[2] - cli_coor[2]
     r = np.sqrt(dx**2+dy**2)
 
-    if np.abs(dz)<100 and r<200:
+    if np.abs(dz)<100 and r<150:
         radian = np.arctan2(dy, dx)
         degree = np.degrees(radian) - cli_angl
         #print(degree, cli_angl, np.degrees(radian))
@@ -73,8 +73,6 @@ if __name__=='__main__':
     args = parser.parse_args()
     client = VividClient(ip=args.ip, port=args.port)
     client.loadMap(map_id=args.env)
-    time.sleep(0.1)
-    client = VividClient(ip=args.ip, port=args.port)
 
     coor_list = get_map_coor(args.infile)
     idx_c = np.random.choice(len(coor_list))
@@ -91,8 +89,6 @@ if __name__=='__main__':
         if done:
             e+=1
             client.loadMap(map_id=args.env)
-            time.sleep(0.1)
-            client = VividClient(ip=args.ip, port=args.port)
 
             idx_c = np.random.choice(len(coor_list))
             c = coor_list[idx_c]
