@@ -1,11 +1,8 @@
-import os
 import sys
 import argparse
 
-from os.path import join, exists
 sys.path.append('../')
 from VividClient import *
-sys.path.append('02_object_generation/')
 
 parser = argparse.ArgumentParser(description='get location')
 parser.add_argument('--ip', default='127.0.0.1',
@@ -21,9 +18,6 @@ if __name__ == '__main__':
     client = VividClient(ip=args.ip, port=args.port)
 
     while True:
-
-        time.sleep(1)
-
         command = input()
         if command == 'g':
             with open(args.outfile, 'a') as texts:

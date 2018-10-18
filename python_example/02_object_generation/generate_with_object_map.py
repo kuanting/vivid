@@ -1,14 +1,11 @@
-import os
 import sys
 import time
 import argparse
 
 import numpy as np
 
-from os.path import join, exists
 sys.path.append('../')
 from VividClient import *
-sys.path.append('02_object_generation/')
 
 parser = argparse.ArgumentParser(description='generate with object map')
 parser.add_argument('--ip', default='127.0.0.1',
@@ -36,6 +33,4 @@ if __name__ == '__main__':
     coor_list = np.array(coor_list, dtype=float)
     
     for c in coor_list:
-        time.sleep(0.1)
         client.createMapObject(args.item_type, c[0], c[1], c[2])
-    

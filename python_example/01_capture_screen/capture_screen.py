@@ -1,14 +1,16 @@
+import sys
+sys.path.append('../')
 from VividClient import *
 
-client = VividClient(ip='192.168.0.11', port=16601)
+client = VividClient(ip='127.0.0.1', port=16612)
 
 responses = client.simGetImages([
 	ImageRequest(0, AirSimImageType.Scene),
-	ImageRequest(1, AirSimImageType.DepthPlanner, True),
-	ImageRequest(0, AirSimImageType.DepthVis),
-	ImageRequest(0, AirSimImageType.Segmentation),
-	ImageRequest(1, AirSimImageType.Segmentation, True),
-	ImageRequest(0, AirSimImageType.SurfaceNormals)])
+    ImageRequest(1, AirSimImageType.DepthPlanner, True),
+    ImageRequest(0, AirSimImageType.DepthVis),
+    ImageRequest(0, AirSimImageType.Segmentation),
+    ImageRequest(1, AirSimImageType.Segmentation, True),
+    ImageRequest(0, AirSimImageType.SurfaceNormals)])
 
 for i, response in enumerate(responses):
 	if response.pixels_as_float:

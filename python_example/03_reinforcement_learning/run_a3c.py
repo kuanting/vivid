@@ -4,8 +4,8 @@ import os
 import torch
 import torch.multiprocessing as mp
 
+from environment import create_env
 import a3c.my_optim as my_optim
-from a3c.envs import create_unreal_env
 from a3c.model import ActorCritic
 from a3c.test import test
 from a3c.train import train
@@ -34,8 +34,6 @@ parser.add_argument('--num-steps', type=int, default=20,
                     help='number of forward steps in A3C (default: 20)')
 parser.add_argument('--no-shared', default=False,
                     help='use an optimizer without shared momentum.')
-parser.add_argument('--no-segmentation', action='store_true',
-                    help='train in environments without segmentation.')
 parser.add_argument('--start-id', type=int, default=0,
                     help='environment start id (default: 0)')
 
@@ -45,10 +43,11 @@ if __name__ == '__main__':
     mp.set_start_method('spawn', force=True)
 
     torch.manual_seed(args.seed)
-    env = create_unreal_env(0, segmentation=not args.no_segmentation, fake=True)
+    env = create_env(0)
     shared_model = ActorCritic(
         env.observation_space.shape[0], env.action_space)
     shared_model.share_memory()
+    env.close()
 
     if args.no_shared:
         optimizer = None
@@ -61,12 +60,14 @@ if __name__ == '__main__':
     counter = mp.Value('i', 0)
     lock = mp.Lock()
 
+    # environment for testing
     p = mp.Process(target=test, args=(args.start_id + args.num_processes,
                                       args, shared_model, counter, lock))
     p.start()
     processes.append(p)
 
     for rank in range(0, args.num_processes):
+        # environment for training
         p = mp.Process(target=train, args=(args.start_id + rank, 
                                            args, shared_model, counter, lock, optimizer))
         p.start()
