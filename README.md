@@ -4,11 +4,50 @@ VIVID (VIrtual environment for VIsual Deep learning) is a photo-realistic simula
 VIVID supports four different characters: robot (mannequin), simple drone, AirSim drone and automobile. Twelve large, diversified indoor and outdoor scenes are included. 
 In addition, we create NPC with simulated human actions to mimic real world events, such as gun shooting and forest fire rescue. 
 VIVID is based on [Unreal Engine](https://www.unrealengine.com) and [Microsoft AirSim](https://github.com/Microsoft/AirSim).
-Documentation and tutorials can be found in our [WiKi page](https://github.com/kuanting/vivid/wiki). 
+Since 2018, we have developed many interesting simulation environments for traffic and drone simulation. More information can be found on AIoT Lab's website [www.aiotlab.org](https://www.aiotlab.org).
 
-![Samba dance](/images/zoe_sambe_dance.gif)|![Fly in a ruined school](/images/drone_fly_in_ruin.gif)
+<a href="https://www.youtube.com/watch?v=7ScHTpC2gQg"><img src="http://img.youtube.com/vi/7ScHTpC2gQg/0.jpg"/></a> | <a href="https://www.youtube.com/watch?v=K3xT1oNaNSI"><img src="http://img.youtube.com/vi/K3xT1oNaNSI/0.jpg"/></a>
 :-----------------------------------------:|:-------------------------------------------------------:
-![Forest fire](/images/robot_run_in_forest_fire.gif)|![Gun shooting detection](/images/drone_in_gun_shooting.gif)
+<a href="https://www.youtube.com/watch?v=u0avZv6DCbw"><img src="http://img.youtube.com/vi/u0avZv6DCbw/0.jpg"/></a> | <a href="https://www.youtube.com/watch?v=8Yk7ITc3amo"><img src="http://img.youtube.com/vi/8Yk7ITc3amo/0.jpg"/></a>
+
+## Download Simulation Games
+We have developed 3 drone related games: Drone Resue, Drone vs Tank, Human vs Drone.
+The games can be downloaded via the link below:
+- [AIoTLab Drone Games](https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2YvcyFBaS1VdFhaNWc4OGxtTzFkWW93ZFRSR0lsTEx3RlE%5FZT16RGlzNEo&id=25CF837976B5942F%21407261&cid=25CF837976B5942F).
+
+
+## Citations
+
+If you like our work, please cite the papers below:
+```
+@inproceedings{lai2018vivid,
+  title={Vivid: Virtual environment for visual deep learning},
+  author={Lai, Kuan-Ting and Lin, Chia-Chih and Kang, Chun-Yao and Liao, Mei-Enn and Chen, Ming-Syan},
+  booktitle={Proceedings of the 26th ACM international conference on Multimedia},
+  pages={1356--1359},
+  year={2018}
+}
+```
+```
+@inproceedings{lin2023traffic,
+  title={Traffic Object Detection in Virtual Environments},
+  author={Lin, Bo-Yi and Huang, Chih-Sheng and Lin, Jia-Ming and Liu, Pin-Hsuan and Lai, Kuan-Ting},
+  booktitle={2023 International Conference on Consumer Electronics-Taiwan (ICCE-Taiwan)},
+  pages={245--246},
+  year={2023},
+  organization={IEEE}
+}
+```
+```
+@INPROCEEDINGS{10227067,
+  title={Augmented Reality for Real Object Detection}, 
+  author={You, Wei-Xuan and Huang, Chih-Sheng and Hu, Kai-Ming and Liu, Tzu-Hsin and Lai, Kuan-Ting},
+  booktitle={2023 International Conference on Consumer Electronics - Taiwan (ICCE-Taiwan)}, 
+  year={2023},
+  pages={803-804},
+  organization={IEEE},
+```
+
 
 ## Architecture
 The architecture of VIVID is shown below. Our system is powered by Unreal and leverages AirSim plugin for hardware simulation and control. 
@@ -25,17 +64,3 @@ The documents and tutorials are in our [GitHub WiKi](https://github.com/kuanting
 Some examples of human actions in VIVID. The actions from left to right are shooting, dying, jumping, walking, surrendering, moaning in pain, running, police running with rifle, crouching and dancing.
 Most action models can be downloaded from [Maximo](https://www.mixamo.com).
 ![Human Action Examples](/images/action_examples.png)
-
-
-## Download Source Code
-The source code and UE4 project file can be downloaded from source folder [/source](/source). Note that you need to install UE4 editor first. We only support Windows now. Linux version is coming soon. 
-
-
-## Download Binaries
-The pre-compiled binary files can be downloaded here:
-
-- [Windows](https://drive.google.com/open?id=18EMYzQpfd-VRArLR0OVhL_2SSWgLGNrS)
-
-
-## Python Controls
-See examples in [/python_example](/python_example)
