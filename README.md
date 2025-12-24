@@ -19,7 +19,7 @@ The games can be downloaded via the link below:
 ## Citations
 
 If you like our work, please cite the papers below:
-```
+```bibtex
 @inproceedings{lai2018vivid,
   title={Vivid: Virtual environment for visual deep learning},
   author={Lai, Kuan-Ting and Lin, Chia-Chih and Kang, Chun-Yao and Liao, Mei-Enn and Chen, Ming-Syan},
@@ -28,7 +28,7 @@ If you like our work, please cite the papers below:
   year={2018}
 }
 ```
-```
+```bibtex
 @inproceedings{lin2023traffic,
   title={Traffic Object Detection in Virtual Environments},
   author={Lin, Bo-Yi and Huang, Chih-Sheng and Lin, Jia-Ming and Liu, Pin-Hsuan and Lai, Kuan-Ting},
@@ -38,7 +38,7 @@ If you like our work, please cite the papers below:
   organization={IEEE}
 }
 ```
-```
+```bibtex
 @INPROCEEDINGS{10227067,
   title={Augmented Reality for Real Object Detection}, 
   author={You, Wei-Xuan and Huang, Chih-Sheng and Hu, Kai-Ming and Liu, Tzu-Hsin and Lai, Kuan-Ting},
